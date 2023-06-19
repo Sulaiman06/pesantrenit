@@ -1,6 +1,8 @@
 <?php
 $label = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
 $month = $label[date('n') - 1];
+$hour = date('H');
+$minute = date('i');
 $year = date('Y');
 $date = date('d');
 ?>
@@ -17,8 +19,7 @@ $date = date('d');
             </li>
         </ul> -->
         <!-- print date - month - year in p -->
-        <p>{{ $date . ' ' . $month . ' ' . $year }} </p>
+        <p>{{ $hour . ':' . $minute . '  -  ' . $date . ' ' . $month . ' ' . $year }} </p>
     </div>
-    <div>&copy; 2020 - {{ $year }}<a href="#"> My School</a> | All Rights Reserved.</div>
-
+    <div>&copy; 2020 - {{ $year }} <a href="#">Pesantren IT</a> | All Rights Reserved.</div>
 </footer>

@@ -3,7 +3,6 @@ $prefix = Request::route()->getPrefix();
 $route = Route::current()->getName();
 @endphp
 
-
 <aside class="main-sidebar">
     <!-- sidebar-->
     <section class="sidebar">
@@ -13,8 +12,8 @@ $route = Route::current()->getName();
                 <a href="{{ route('dashboard') }}">
                     <!-- logo for regular state and mobile devices -->
                     <div class="d-flex align-items-center justify-content-center">
-                        <img src="{{ asset('backend/images/logo-dark.png') }}" alt="Logo">
-                        <h3><b>My</b> School</h3>
+                        <img src="{{ asset('backend/images/logo-removebg-preview.png') }}" alt="Logo">
+                        <h3><b>Pesantren</b>IT</h3>
                     </div>
                 </a>
             </div>
@@ -59,7 +58,7 @@ $route = Route::current()->getName();
                 </ul>
             </li>
 
-            <li class="header nav-small-cap">Kesiswaan</li>
+            <li class="header nav-small-cap">Kesantrian</li>
             <li class="treeview {{ $prefix == '/administrations' ? 'active' : '' }}">
                 <a href="#">
                     <i class="fa fa-solid fa-book"></i><span>Administrasi</span>
@@ -68,13 +67,13 @@ $route = Route::current()->getName();
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="{{ route('student.class.view') }}"><i class="ti-more"></i>Kelas Siswa</a></li>
+                    <li><a href="{{ route('student.class.view') }}"><i class="ti-more"></i>Kelas Santri</a></li>
                     <li><a href="{{ route('student.year.view') }}"><i class="ti-more"></i>Tahun Angkatan</a></li>
                     <li><a href="{{ route('student.group.view') }}"><i class="ti-more"></i>Jurusan</a></li>
-                    <li><a href="{{ route('student.shift.view') }}"><i class="ti-more"></i>Shift Siswa</a></li>
+                    <li><a href="{{ route('student.shift.view') }}"><i class="ti-more"></i>Shift Santri</a></li>
                     <li><a href="{{ route('fee.category.view') }}"><i class="ti-more"></i>Kategori Pembayaran</a></li>
                     <li><a href="{{ route('fee.amount.view') }}"><i class="ti-more"></i>Kelola Tagihan</a></li>
-                    <li><a href="{{ route('exam.type.view') }}"><i class="ti-more"></i>Ujian Siswa</a></li>
+                    <li><a href="{{ route('exam.type.view') }}"><i class="ti-more"></i>Ujian Santri</a></li>
                     <li><a href="{{ route('school.subject.view') }}"><i class="ti-more"></i>Mata Pelajaran</a></li>
                     <li><a href="{{ route('assign.subject.view') }}"><i class="ti-more"></i>Kurikulum</a></li>
                     <li><a href="{{ route('designation.view') }}"><i class="ti-more"></i>Jabatan Sekolah</a></li>
@@ -84,23 +83,20 @@ $route = Route::current()->getName();
             <li class="treeview {{ $prefix == '/students' ? 'active' : '' }}">
                 <a href="#">
                     <i class="fa fa-solid fa-graduation-cap"></i>
-                    <span>Manajemen Siswa</span>
+                    <span>Manajemen Santri</span>
                     <span class="pull-right-container">
                         <i class="fa fa-angle-right pull-right"></i>
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="{{ route('student.registration.view') }}"><i class="ti-more"></i>Pendaftaran Siswa</a>
+                    <li><a href="https://bit.ly/PendaftaranSantriBaruPesantrenIT2023"><i class="ti-more"></i>Daftar Santri</a>
                     <li><a href="{{ route('roll.generate.view') }}"><i class="ti-more"></i>Roll Generate</a>
                     <li><a href="{{ route('registration.fee.view') }}"><i class="ti-more"></i>Biaya Pendaftaran</a>
                     </li>
                 </ul>
             </li>
-
-
-
-            <li class="header nav-small-cap">Kepegawaian</li>
-
+            
+            <!-- <li class="header nav-small-cap">Kepegawaian</li>
             <li class="treeview">
                 <a href="#">
                     <i class="fa fa-solid fa-users-gear"></i>
@@ -112,14 +108,24 @@ $route = Route::current()->getName();
                 <ul class="treeview-menu">
                     <li><a href="components_alerts.html"><i class="ti-more"></i>Alerts</a></li>
                     <li><a href="components_badges.html"><i class="ti-more"></i>Badge</a></li>
-
                 </ul>
+            </li> -->
+
+            <li class="header nav-small-cap">Info</li>
+            <li>
+                <a href="{{ route('visi_and_misi') }}">
+                    <i class="fa fa-light fa-users"></i>
+                    <span>Visi & Misi</span>
+                </a>
+                <a href="https://pesantrenit.com/galeri-santri/">
+                    <i class="fa fa-light fa-users"></i>
+                    <span>Gallery</span>
+                </a>
+                <a href="https://pesantrenit.com/contact/">
+                    <i class="fa fa-light fa-users"></i>
+                    <span>Contact</span>
+                </a>
             </li>
-
-
-
-
-
         </ul>
     </section>
 

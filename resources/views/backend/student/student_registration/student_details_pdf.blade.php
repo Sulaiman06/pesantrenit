@@ -136,11 +136,13 @@
             <td>{{ $details['group']['name'] }}</td>
         </tr>
 
-        <tr>
-            <td>15</td>
-            <td><b>Shift Siswa</b></td>
-            <td>{{ $details['shift']['name'] }}</td>
-        </tr>
+        @if($details['shift'] == !null)
+            <tr>
+                <td>15</td>
+                <td><b>Shift Siswa</b></td>
+                <td>{{ $details['shift']['name'] }}</td>
+            </tr>
+        @endif
 
         <tr>
             <td>16</td>

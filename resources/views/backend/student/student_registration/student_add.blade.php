@@ -87,22 +87,7 @@
                                         </div>
 
                                         <div class="row">
-                                            <div class="col-md-4">
-                                                <div class="form-group">
-                                                    <h5>Agama <span class="text-danger">*</span></h5>
-                                                    <div class="controls">
-                                                        <select name="religion" id="religion" required="" class="form-control">
-                                                            <option value="" selected="" disabled="">Pilih Agama</option>
-                                                            <option value="Islam">Islam</option>
-                                                            <option value="Kristen">Kristen</option>
-                                                            <option value="Katholik">Katholik</option>
-                                                            <option value="Hindu">Hindu</option>
-                                                            <option value="Budha">Budha</option>
-                                                            <option value="Konghuchu">Konghunchu</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            
 
                                             <div class="col-md-4">
                                                 <div class="form-group">
@@ -118,6 +103,20 @@
                                                     <h5>Potongan Biaya (Opsional)</h5>
                                                     <div class="controls">
                                                         <input type="text" name="discount" class="form-control">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <h5>Jurusan (Opsional)</h5>
+                                                    <div class="controls">
+                                                        <select name="group_id" class="form-control">
+                                                            <option value="" selected="" disabled="">Pilih Jurusan</option>
+                                                            @foreach ($groups as $group)
+                                                            <option value="{{ $group->id }}">{{ $group->name }}</option>
+                                                            @endforeach
+                                                        </select>
                                                     </div>
                                                 </div>
                                             </div>
@@ -152,19 +151,7 @@
                                                 </div>
                                             </div>
 
-                                            <div class="col-md-4">
-                                                <div class="form-group">
-                                                    <h5>Jurusan (Opsional)</h5>
-                                                    <div class="controls">
-                                                        <select name="group_id" class="form-control">
-                                                            <option value="" selected="" disabled="">Pilih Jurusan</option>
-                                                            @foreach ($groups as $group)
-                                                            <option value="{{ $group->id }}">{{ $group->name }}</option>
-                                                            @endforeach
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            
                                         </div>
 
                                         <div class="row">
