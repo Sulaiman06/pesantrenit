@@ -62,21 +62,8 @@
                                                         </div>
                                                         <div>
                                                             <a href="#" class="text-white font-weight-600 hover-primary mb-1 font-size-16">{{ $data->name }}</a>
-                                                            <span class="text-fade d-block">Pharetra, Nulla , Nec, Aliquet</span>
                                                         </div>
                                                     </div>
-                                                </td>
-                                                <td>
-                                                    <span class="text-fade font-weight-600 d-block font-size-16">Paid</span>
-                                                    <span class="text-white font-weight-600 d-block font-size-16">$45,800k</span>
-                                                </td>
-                                                <td>
-                                                    <span class="text-fade font-weight-600 d-block font-size-16">Paid</span>
-                                                    <span class="text-white font-weight-600 d-block font-size-16">$45k</span>
-                                                </td>
-                                                <td>
-                                                    <span class="text-fade font-weight-600 d-block font-size-16">Sophia</span>
-                                                    <span class="text-white font-weight-600 d-block font-size-16">Pharetra</span>
                                                 </td>
                                                 <td class="text-right">
                                                     <a href="#" class="waves-effect waves-light btn btn-info btn-circle mx-5"><span class="mdi mdi-bookmark-plus"></span></a>
