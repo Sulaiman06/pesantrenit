@@ -24,8 +24,6 @@
                                     <input type="hidden" name="id" value="{{ $editData->id }}">
                                     <div class="row">
                                         <div class="col-12">
-
-
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <div class="form-group">
@@ -103,37 +101,6 @@
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <div class="form-group">
-                                                        <h5>Agama <span class="text-danger">*</span></h5>
-                                                        <div class="controls">
-                                                            <select name="religion" id="religion" required=""
-                                                                class="form-control">
-                                                                <option value="" selected="" disabled="">Pilih
-                                                                    Agama</option>
-                                                                <option value="Islam"
-                                                                    {{ $editData['student']['religion'] == 'Islam' ? 'selected' : '' }}>
-                                                                    Islam</option>
-                                                                <option value="Kristen"
-                                                                    {{ $editData['student']['religion'] == 'Kristen' ? 'selected' : '' }}>
-                                                                    Kristen</option>
-                                                                <option value="Katholik"
-                                                                    {{ $editData['student']['religion'] == 'Katholik' ? 'selected' : '' }}>
-                                                                    Katholik</option>
-                                                                <option value="Hindu"
-                                                                    {{ $editData['student']['religion'] == 'Hindu' ? 'selected' : '' }}>
-                                                                    Hindu</option>
-                                                                <option value="Budha"
-                                                                    {{ $editData['student']['religion'] == 'Budha' ? 'selected' : '' }}>
-                                                                    Budha</option>
-                                                                <option value="Konghuchu"
-                                                                    {{ $editData['student']['religion'] == 'Konghuchu' ? 'selected' : '' }}>
-                                                                    Konghunchu</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-md-4">
-                                                    <div class="form-group">
                                                         <h5>Tanggal Lahir <span class="text-danger">*</span></h5>
                                                         <div class="controls">
                                                             <input type="date" name="birth" class="form-control"
@@ -149,6 +116,24 @@
                                                         <div class="controls">
                                                             <input type="text" name="discount" class="form-control"
                                                                 value="{{ $editData['discount']['discount'] }}">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <h5>Jurusan (Opsional)</h5>
+                                                        <div class="controls">
+                                                            <select name="group_id" class="form-control">
+                                                                <option value="" selected="" disabled="">
+                                                                    Pilih Jurusan</option>
+                                                                @foreach ($groups as $group)
+                                                                    <option value="{{ $group->id }}"
+                                                                        {{ $editData->group_id == $group->id ? 'selected' : '' }}>
+                                                                        {{ $group->name }}
+                                                                    </option>
+                                                                @endforeach
+                                                            </select>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -194,19 +179,9 @@
 
                                                 <div class="col-md-4">
                                                     <div class="form-group">
-                                                        <h5>Jurusan (Opsional)</h5>
+                                                        <h5>Catatan <span class="text-danger">*</span></h5>
                                                         <div class="controls">
-                                                            <select name="group_id" class="form-control">
-                                                                <option value="" selected="" disabled="">
-                                                                    Pilih Jurusan</option>
-                                                                @foreach ($groups as $group)
-                                                                    <option value="{{ $group->id }}"
-                                                                        {{ $editData->group_id == $group->id ? 'selected' : '' }}>
-
-                                                                        {{ $group->name }}
-                                                                    </option>
-                                                                @endforeach
-                                                            </select>
+                                                            <textarea name="note" cols="25" rows="2" class="form-control">{{ $editData['student']['note'] }}</textarea>
                                                         </div>
                                                     </div>
                                                 </div>

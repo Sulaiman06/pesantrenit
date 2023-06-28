@@ -133,6 +133,16 @@ class StudentRegistrationController extends Controller
         return redirect()->route('student.registration.view')->with($notification);
     }
 
+    public function StudentRegistrationShow($student_id) {
+        $data['years'] = StudentYear::all();
+        $data['classes'] = StudentClass::all();
+        $data['groups'] = StudentGroup::all();
+        $data['shifts'] = StudentShift::all();
+
+        $data['showData'] = AssignStudent::with(['student'])->where('student_id', $student_id)->first();
+        return view('backend.student.student_registration.student_show', $data);
+    }
+
     public function StudentRegistrationEdit($student_id)
     {
         $data['years'] = StudentYear::all();
@@ -157,6 +167,7 @@ class StudentRegistrationController extends Controller
             $user->address = $request->address;
             $user->gender = $request->gender;
             $user->religion = $request->religion;
+            $user->note = $request->note;
             $user->birth = date('Y-m-d', strtotime($request->birth));
 
             if ($request->file('image')) {

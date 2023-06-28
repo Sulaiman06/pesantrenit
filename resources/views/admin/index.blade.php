@@ -13,15 +13,17 @@
                 <div class="row">
                     <div class="col-xl-3 col-6">
                         <div class="box overflow-hidden pull-up">
-                            <div class="box-body">
-                                <div class="icon bg-primary-light rounded w-60 h-60">
-                                    <i class="text-primary mr-0 font-size-24 mdi mdi-account-multiple"></i>
+                            <a href="{{ route('student.registration.view') }}">
+                                <div class="box-body">
+                                    <div class="icon bg-primary-light rounded w-60 h-60">
+                                        <i class="text-primary mr-0 font-size-24 mdi mdi-account-multiple"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-mute mt-20 mb-0 font-size-16">Jumlah Pendaftar</p>
+                                        <h3 class="text-white mb-0 font-weight-500">{{ $totalStudent }}</h3>
+                                    </div>
                                 </div>
-                                <div>
-                                    <p class="text-mute mt-20 mb-0 font-size-16">Jumlah Siswa</p>
-                                    <h3 class="text-white mb-0 font-weight-500">{{ $totalStudent }}</h3>
-                                </div>
-                            </div>
+                            </a>
                         </div>
                     </div>
                     <div class="col-9">
@@ -44,9 +46,9 @@
                                         <thead>
                                             <tr class="text-uppercase bg-lightest">
                                                 <th style="min-width: 250px"><span class="text-fade">name</span></th>
-                                                <th style="min-width: 100px"><span class="text-fade">price</span></th>
-                                                <th style="min-width: 100px"><span class="text-fade">deposit</span></th>
-                                                <th style="min-width: 150px"><span class="text-fade">agent</span></th>
+                                                <th style="min-width: 100px"></th>
+                                                <th style="min-width: 100px"></th>
+                                                <th style="min-width: 150px"></th>
                                                 <th style="min-width: 120px"></th>
                                             </tr>
                                         </thead>

@@ -43,7 +43,7 @@
                                                 @foreach ($allData as $key => $value)
                                                     <tr>
                                                         <td>{{ $key + 1 }}</td>
-                                                        <td>{{ $value['student']['name'] }}</td>
+                                                        <td><a href="{{ route('student.registration.show', $value->student_id) }}">{{ $value['student']['name'] }}</a></td>
                                                         <td>{{ $value['student']['id_no'] }}</td>
                                                         <td>{{ $value['student_year']['name'] }}</td>
                                                         <td>{{ $value['student_class']['name'] }}</td>
