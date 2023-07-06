@@ -149,7 +149,9 @@ Route::prefix('students')->group(function () {
     Route::post('/registration/store', [StudentRegistrationController::class, 'StudentRegistrationStore'])->name('store.student.registration');
     Route::get('/year/class/wise', [StudentRegistrationController::class, 'StudentClassYearWise'])->name('student.year.class.wise');
     Route::get('/registration/edit/{student_id}', [StudentRegistrationController::class, 'StudentRegistrationEdit'])->name('student.registration.edit');
+    Route::get('/registration/editnote/{student_id}', [StudentRegistrationController::class, 'StudentRegistrationEditNote'])->name('student.registration.edit.note');
     Route::post('/registration/update/{student_id}', [StudentRegistrationController::class, 'StudentRegistrationUpdate'])->name('update.student.registration');
+    Route::post('/registration/updatenote/{student_id}', [StudentRegistrationController::class, 'StudentRegistrationUpdateNote'])->name('update.note.student.registration');
     Route::get('/registration/promotion/{student_id}', [StudentRegistrationController::class, 'StudentRegistrationPromotion'])->name('student.registration.promotion');
     Route::post('/registration/update/promotion/{student_id}', [StudentRegistrationController::class, 'StudentUpdatePromotion'])->name('promotion.student.registration');
     Route::get('/registration/details/{student_id}', [StudentRegistrationController::class, 'StudentRegistrationDetails'])->name('student.registration.details');

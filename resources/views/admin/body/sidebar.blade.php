@@ -89,7 +89,7 @@ $route = Route::current()->getName();
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="https://bit.ly/PendaftaranSantriBaruPesantrenIT2023"><i class="ti-more"></i>Daftar Santri</a>
+                    <li><a href="{{ route('student.registration.view') }}"><i class="ti-more"></i>Daftar Santri</a>
                     <li><a href="{{ route('roll.generate.view') }}"><i class="ti-more"></i>Roll Generate</a>
                     <li><a href="{{ route('registration.fee.view') }}"><i class="ti-more"></i>Biaya Pendaftaran</a>
                     </li>

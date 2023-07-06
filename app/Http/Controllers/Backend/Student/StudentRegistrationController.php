@@ -143,6 +143,24 @@ class StudentRegistrationController extends Controller
         return view('backend.student.student_registration.student_show', $data);
     }
 
+    public function StudentRegistrationEditNote($student_id)
+    {
+        $data['editData'] = AssignStudent::with(['student'])->where('student_id', $student_id)->first();
+        return view('backend.student.student_registration.student_edit_note', $data);
+    }
+
+    public function StudentRegistrationUpdateNote(Request $request, $student_id)
+    {
+        $user = User::where('id', $student_id)->first();
+        $user->note = $request->note;
+        $user->save();
+        $notification = array(
+            'message' => 'Catatan Berhasil Diubah!',
+            'alert-type' => 'success',
+        );
+        return redirect()->route('student.registration.show', $student_id)->with($notification);
+    }
+
     public function StudentRegistrationEdit($student_id)
     {
         $data['years'] = StudentYear::all();
