@@ -86,9 +86,9 @@ class StudentRegistrationController extends Controller
 
             $final_id_no = $checkYear . $id_no;
             $user = new User();
-            $code = rand(0000, 9999);
             $user->id_no = $final_id_no;
-            $user->password = bcrypt($code);
+            $code = rand(0000, 9999);
+            $user->password = bcrypt($request->name . '-' . $id_no);
             $user->usertype = 'Student';
             $user->code = $code;
             $user->name = $request->name;
@@ -97,7 +97,6 @@ class StudentRegistrationController extends Controller
             $user->mobile = $request->mobile;
             $user->address = $request->address;
             $user->gender = $request->gender;
-            $user->religion = $request->religion;
             $user->birth = date('Y-m-d', strtotime($request->birth));
 
             if ($request->file('image')) {
